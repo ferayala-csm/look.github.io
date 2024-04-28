@@ -17,13 +17,13 @@
         border: 1px solid #000000;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 9999;
+        z-index: 12000;
     }
     /* Estilo para centrar el botón */
     #boton-mostrar {
         position: fixed;
-        top: 50%;
-        left: 50%;
+        top: 250%;
+        left: 250%;
         transform: translate(-50%, -50%);
         z-index: 9998; /* Z-index menor que la ventana emergente para que esté detrás */
     }
@@ -62,11 +62,11 @@
 </head>
 <body>
 <!-- Botón para mostrar la ventana emergente -->
-<button id="boton-mostrar">Ver</button>
+<button id="boton-mostrar">Abrir</button>
 
 <!-- Contenedor de la ventana emergente -->
 <div class="popup-container">
-    <p id="mensaje">TE ESTÁN GORRIANDO</p>
+    <p id="mensaje">HOY GORREAN AL QUE NO PONE PLAY</p>
     <!-- Video embebido de YouTube -->
     <iframe id="video" src="https://www.youtube.com/embed/1K0ij7nU5y8" frameborder="0" allowfullscreen></iframe>
 </div>
