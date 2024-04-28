@@ -27,8 +27,9 @@
         transform: translate(-50%, -50%);
         z-index: 9998; /* Z-index menor que la ventana emergente para que esté detrás */
     }
+    /* Estilo para el video embebido */
     #video {
-        max-width: 100%; /* Ajustar el video al ancho de la pantalla */
+        width: 100%; /* Ajustar el video al ancho de la pantalla */
     }
 </style>
 <script>
@@ -45,7 +46,7 @@
             var mensaje = document.getElementById('mensaje');
             var botonMostrar = document.getElementById('boton-mostrar');
 
-            mensaje.innerText = 'POR ESO NO TE GORREAN <3'; // Cambiar el mensaje de la ventana emergente a "GRACIAS"
+            mensaje.innerText = 'GRACIAS'; // Cambiar el mensaje de la ventana emergente a "GRACIAS"
             botonMostrar.innerText = 'Reiniciar'; // Cambiar la leyenda del botón a "Reiniciar"
         }
 
@@ -61,15 +62,16 @@
 </head>
 <body>
 <!-- Botón para mostrar la ventana emergente -->
-<button id="boton-mostrar">Abrir</button>
+<button id="boton-mostrar">Ver</button>
 
 <!-- Contenedor de la ventana emergente -->
 <div class="popup-container">
-    <p id="mensaje">SI NO ESCUCHAS HOY TE GORREAN</p>
+    <p id="mensaje">TE ESTÁN GORRIANDO</p>
     <!-- Video embebido de YouTube -->
-     <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1K0ij7nU5y8" frameborder="0" allowfullscreen></iframe>
+    <iframe id="video" src="https://www.youtube.com/embed/1K0ij7nU5y8" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <!-- Contenido de la página -->
 </body>
 </html>
+
