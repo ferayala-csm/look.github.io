@@ -4,12 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alerta !</title>
+<style>
+    /* Estilo para el contenedor de la ventana emergente */
+    .popup-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+</style>
 <script>
     window.onload = function() {
-        window.confirm("TE ESTÁN GORRIANDO");
+        // Crear un elemento div para la ventana emergente
+        var popup = document.createElement('div');
+        popup.className = 'popup-container';
+        
+        // Crear un elemento de texto con el mensaje
+        var message = document.createTextNode("TE ESTÁN GORRIANDO");
+        
+        // Agregar el mensaje al contenedor de la ventana emergente
+        popup.appendChild(message);
+        
+        // Agregar el contenedor al cuerpo del documento
+        document.body.appendChild(popup);
     };
 </script>
 </head>
 <body>
 <!-- Contenido de la página -->
 </body>
+</html>
