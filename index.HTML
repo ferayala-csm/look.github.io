@@ -7,6 +7,7 @@
 <style>
     /* Estilo para el contenedor de la ventana emergente */
     .popup-container {
+        display: none; /* Ocultar inicialmente */
         position: fixed;
         top: 50%;
         left: 50%;
@@ -21,22 +22,28 @@
 </style>
 <script>
     window.onload = function() {
-        // Crear un elemento div para la ventana emergente
-        var popup = document.createElement('div');
-        popup.className = 'popup-container';
+        // Función para mostrar la ventana emergente
+        function mostrarVentanaEmergente() {
+            var popup = document.querySelector('.popup-container');
+            popup.style.display = 'block'; // Mostrar el contenedor de la ventana emergente
+        }
         
-        // Crear un elemento de texto con el mensaje
-        var message = document.createTextNode("TE ESTÁN GORRIANDO");
-        
-        // Agregar el mensaje al contenedor de la ventana emergente
-        popup.appendChild(message);
-        
-        // Agregar el contenedor al cuerpo del documento
-        document.body.appendChild(popup);
+        // Obtener el botón y añadir un event listener para mostrar la ventana emergente cuando se haga clic
+        var botonMostrar = document.getElementById('boton-mostrar');
+        botonMostrar.addEventListener('click', mostrarVentanaEmergente);
     };
 </script>
 </head>
 <body>
+<!-- Botón para mostrar la ventana emergente -->
+<button id="boton-mostrar">Destapar</button>
+
+<!-- Contenedor de la ventana emergente -->
+<div class="popup-container">
+    <p>TE ESTÁN GORRIANDO</p>
+</div>
+
 <!-- Contenido de la página -->
 </body>
 </html>
+
