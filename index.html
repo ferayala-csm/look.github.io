@@ -22,8 +22,8 @@
     /* Estilo para centrar el botón */
     #boton-mostrar {
         position: fixed;
-        top: 150%;
-        left: 150%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         z-index: 9998; /* Z-index menor que la ventana emergente para que esté detrás */
     }
@@ -36,20 +36,35 @@
             popup.style.display = 'block'; // Mostrar el contenedor de la ventana emergente
             botonMostrar.style.display = 'none'; // Ocultar el botón
         }
-        
+
+        // Función para cambiar la leyenda del botón y el contenido de la ventana emergente al reproducirse el video
+        function cambiarContenidoVideo() {
+            var mensaje = document.getElementById('mensaje');
+            var botonMostrar = document.getElementById('boton-mostrar');
+
+            mensaje.innerText = 'POR ESO NO TE GORREAN <3'; // Cambiar el mensaje de la ventana emergente a "GRACIAS"
+            botonMostrar.innerText = 'Reiniciar'; // Cambiar la leyenda del botón a "Reiniciar"
+        }
+
         // Obtener el botón y añadir un event listener para mostrar la ventana emergente cuando se haga clic
         var botonMostrar = document.getElementById('boton-mostrar');
         botonMostrar.addEventListener('click', mostrarVentanaEmergente);
+
+        // Obtener el elemento de video y añadir un event listener para cambiar el contenido cuando se reproduzca
+        var video = document.getElementById('video');
+        video.addEventListener('play', cambiarContenidoVideo);
     };
 </script>
 </head>
 <body>
 <!-- Botón para mostrar la ventana emergente -->
-<button id="boton-mostrar"><3</button>
+<button id="boton-mostrar">Abrir</button>
 
 <!-- Contenedor de la ventana emergente -->
 <div class="popup-container">
-    <p>TE ESTÁN GORRIANDO</p>
+    <p id="mensaje">SI NO ESCUCHAS HOY TE GORREAN</p>
+    <!-- Video embebido de YouTube -->
+     <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1K0ij7nU5y8" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <!-- Contenido de la página -->
