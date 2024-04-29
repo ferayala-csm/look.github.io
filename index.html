@@ -6,19 +6,22 @@
 <title>Alerta !</title>
 <style>
     /* Estilo para el contenedor de la ventana emergente */
-    .popup-container {
-        display: none; /* Ocultar inicialmente */
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        background-color: #ffffff;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 11050;
-        text-align: center; /* Centrar el contenido */
+.popup-container {
+    display: none; /* Ocultar inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10050;
+    text-align: center; /* Centrar el contenido */
+    width: 90%; /* Ancho del 90% del viewport */
+    max-width: 400px; /* Máximo ancho de 400px para evitar que sea demasiado ancho en pantallas grandes */
+    height: auto; /* Altura automática para ajustarse al contenido */
     }
     /* Estilo para centrar el botón */
     #boton-mostrar {
