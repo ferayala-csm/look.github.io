@@ -49,6 +49,28 @@
         margin-bottom: 20px; /* Espacio adicional debajo del título */
         color: #333; /* Color del texto */
     }
+    /* Estilo para la ventana emergente */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        z-index: 10000; /* Asegura que la ventana emergente esté en la parte superior */
+        display: none;
+    }
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 </style>
 <script>
     window.onload = function() {
@@ -59,15 +81,12 @@
             botonMostrar.style.display = 'none'; // Ocultar el botón
         }
 
-        // Función para cambiar la leyenda del botón y el contenido de la ventana emergente al reproducirse el video
+        // Función para mostrar la ventana emergente y ocultar el título al reproducir el video
         function cambiarContenidoVideo() {
             var tituloMensaje = document.getElementById('titulo-mensaje');
-            var mensaje = document.getElementById('mensaje');
-            var botonMostrar = document.getElementById('boton-mostrar');
-
-            tituloMensaje.innerText = 'GRACIAS <3'; // Cambiar el título a "GRACIAS"
-            mensaje.innerText = ''; // Eliminar el mensaje anterior
-            botonMostrar.style.display = 'none'; // Ocultar el botón
+            var overlay = document.querySelector('.overlay');
+            overlay.style.display = 'block'; // Mostrar la ventana emergente
+            tituloMensaje.style.display = 'none'; // Ocultar el título
         }
 
         // Obtener el botón y añadir un event listener para mostrar la ventana emergente cuando se haga clic
@@ -89,6 +108,13 @@
     <h2 id="titulo-mensaje">HOY GORREAN AL QUE NO PONE PLAY</h2>
     <!-- Video embebido de YouTube -->
     <iframe id="video" src="https://www.youtube.com/embed/1K0ij7nU5y8" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- Ventana emergente -->
+<div class="overlay">
+    <div class="popup">
+        <h2>GRACIAS</h2>
+    </div>
 </div>
 
 <!-- Contenido de la página -->
