@@ -36,6 +36,7 @@
     /* Estilo para el video embebido */
     #video {
         width: 100%; /* Ajustar el video al ancho de la pantalla */
+        height: auto; /* Ajustar automáticamente la altura para mantener la proporción */
     }
 </style>
 <script>
@@ -52,7 +53,7 @@
             var mensaje = document.getElementById('mensaje');
             var botonMostrar = document.getElementById('boton-mostrar');
 
-            mensaje.innerText = 'GRACIAS'; // Cambiar el mensaje de la ventana emergente a "GRACIAS"
+            mensaje.innerText = 'GRACIAS <3'; // Cambiar el mensaje de la ventana emergente a "GRACIAS <3"
             botonMostrar.innerText = 'Reiniciar'; // Cambiar la leyenda del botón a "Reiniciar"
         }
 
@@ -80,4 +81,5 @@
 <!-- Contenido de la página -->
 </body>
 </html>
+
 
