@@ -42,6 +42,14 @@
         width: 100%; /* Ajustar el video al ancho de la pantalla */
         height: auto; /* Ajustar automáticamente la altura para mantener la proporción */
     }
+    /* Estilo para el título específico */
+#titulo-mensaje {
+    font-size: 28px; /* Tamaño de la letra */
+    font-weight: bold; /* Estilo de la letra */
+    margin-bottom: 20px; /* Espacio adicional debajo del título */
+    color: #333; /* Color del texto */
+}
+
 </style>
 <script>
     window.onload = function() {
@@ -77,7 +85,7 @@
 
 <!-- Contenedor de la ventana emergente -->
 <div class="popup-container">
-    <p id="mensaje">HOY GORREAN AL QUE NO PONE PLAY</p>
+    <h2 id="titulo-mensaje">HOY GORREAN AL QUE NO PONE PLAY</h2>
     <!-- Video embebido de YouTube -->
     <iframe id="video" src="https://www.youtube.com/embed/1K0ij7nU5y8" frameborder="0" allowfullscreen></iframe>
 </div>
