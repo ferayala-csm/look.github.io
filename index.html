@@ -6,22 +6,22 @@
 <title>Alerta !</title>
 <style>
     /* Estilo para el contenedor de la ventana emergente */
-.popup-container {
-    display: none; /* Ocultar inicialmente */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 10050;
-    text-align: center; /* Centrar el contenido */
-    width: 90%; /* Ancho del 90% del viewport */
-    max-width: 400px; /* Máximo ancho de 400px para evitar que sea demasiado ancho en pantallas grandes */
-    height: 75%; /* Altura automática para ajustarse al contenido */
+    .popup-container {
+        display: none; /* Ocultar inicialmente */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 10050;
+        text-align: center; /* Centrar el contenido */
+        width: 90%; /* Ancho del 90% del viewport */
+        max-width: 400px; /* Máximo ancho de 400px para evitar que sea demasiado ancho en pantallas grandes */
+        height: 75%; /* Altura automática para ajustarse al contenido */
     }
     /* Estilo para centrar el botón */
     #boton-mostrar {
@@ -43,13 +43,12 @@
         height: auto; /* Ajustar automáticamente la altura para mantener la proporción */
     }
     /* Estilo para el título específico */
-#titulo-mensaje {
-    font-size: 28px; /* Tamaño de la letra */
-    font-weight: bold; /* Estilo de la letra */
-    margin-bottom: 20px; /* Espacio adicional debajo del título */
-    color: #333; /* Color del texto */
-}
-
+    #titulo-mensaje {
+        font-size: 28px; /* Tamaño de la letra */
+        font-weight: bold; /* Estilo de la letra */
+        margin-bottom: 20px; /* Espacio adicional debajo del título */
+        color: #333; /* Color del texto */
+    }
 </style>
 <script>
     window.onload = function() {
@@ -62,11 +61,13 @@
 
         // Función para cambiar la leyenda del botón y el contenido de la ventana emergente al reproducirse el video
         function cambiarContenidoVideo() {
+            var tituloMensaje = document.getElementById('titulo-mensaje');
             var mensaje = document.getElementById('mensaje');
             var botonMostrar = document.getElementById('boton-mostrar');
 
-            mensaje.innerText = 'GRACIAS <3'; // Cambiar el mensaje de la ventana emergente a "GRACIAS <3"
-            botonMostrar.innerText = 'Reiniciar'; // Cambiar la leyenda del botón a "Reiniciar"
+            tituloMensaje.innerText = 'GRACIAS'; // Cambiar el título a "GRACIAS"
+            mensaje.innerText = ''; // Eliminar el mensaje anterior
+            botonMostrar.style.display = 'none'; // Ocultar el botón
         }
 
         // Obtener el botón y añadir un event listener para mostrar la ventana emergente cuando se haga clic
@@ -93,6 +94,7 @@
 <!-- Contenido de la página -->
 </body>
 </html>
+
 
 
 
